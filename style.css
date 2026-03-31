@@ -1,0 +1,396 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+:root {
+    --bg-color: #fdf5f0;
+    --sidebar-bg: #222222;
+    --text-color: #333333;
+    --sidebar-text: #ffffff;
+    --highlight-color:hsl(260, 78%, 72%);
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --sidebar-bg: #111111;
+    --text-color: #f0f0f0;
+    --sidebar-text: #f0f0f0;
+    --highlight-color: hsl(260, 85%, 80%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Navigation Menu */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin-bottom: 15px;
+}
+
+.nav-links a, .dropdown-btn {
+    text-decoration: none;
+    color: var(--sidebar-text);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.nav-links a:hover, .dropdown-btn:hover, .nav-links a.active {
+    color: var(--highlight-color);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    list-style: none;
+    padding-left: 20px;
+    display: flex; 
+    flex-direction: column;
+    margin-top: 0; 
+
+    /* the smooth hidden state */
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden; 
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content.show {
+    display: flex;
+}
+
+.dropdown-content a {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    transform: scaleY(1);
+    opacity: 1;
+    max-height: 200px; 
+    margin-top: 5px;
+}
+
+/* Theme Button */
+.theme-btn {
+    background: transparent;
+    color: var(--sidebar-text);
+    border: 1px solid var(--sidebar-text);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: var(--sidebar-text);
+    color: var(--sidebar-bg);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 260px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section with Pictures */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    opacity: 0.5;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* Contact Section */
+.contact-section {
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+
+/* ===================== Art Page Specific Styles ======================= */
+.art-page {
+    
+    padding: 72px 40px 40px 40px;
+    background-color: var(--bg-color);
+}
+
+.art-header {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.art-header h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    
+}
+
+.art-category {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* ===================== Sharp Line Header ======================= */
+.sharp-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sharp-header h3 {
+    /* font-family: 'Amsterdam Handwriting', 'Amsterdam', 'Great Vibes', cursive; */
+    font-family: 'Amsterdam', 'Allura', cursive;
+    font-weight: lighter;
+    font-size: 4rem;
+    color: var(--highlight-color);
+    margin-bottom: 2px; 
+}
+
+/* This draws the fading line right below the text */
+.sharp-header::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--text-color), transparent);
+    margin: 0 auto;
+}
+
+
+/* Pinterest Style Gallery */
+.pinterest-gallery {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.pinterest-item {
+    margin-bottom: 20px;
+    break-inside: avoid;
+}
+
+.pinterest-item img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.pinterest-item img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Make it look good on smaller screens */
+@media (max-width: 1000px) {
+    .pinterest-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .pinterest-gallery {
+        column-count: 1;
+    }
+}
+
+/* ===================== Product Page (Spotify Style) ======================= */
+.product-page {
+    padding: 60px 40px;
+}
+
+.spotify-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.spotify-tabs {
+    display: flex;
+    gap: 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    padding-bottom: 10px;
+}
+
+.spotify-tabs span {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.spotify-tabs span:hover {
+    opacity: 1;
+}
+
+
+.spotify-tabs span.active {
+    opacity: 1;
+    color: var(--highlight-color);
+    position: relative;
+}
+
+/* The Grid Layout */
+.spotify-grid {
+    display: grid;
+    /* This makes it responsive so it fits as many cards as possible */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* The Individual Album Cards */
+.spotify-card {
+    background-color: rgba(0, 0, 0, 0.03); /* Light mode card background */
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .spotify-card {
+    background-color: #181818; /* Dark mode card background (matches Spotify) */
+}
+
+.spotify-card:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .spotify-card:hover {
+    background-color: #282828; 
+}
+
+/* Forces the thumbnail to be a perfect square */
+.card-img-wrapper {
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spotify-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds the "..." if the title is too long */
+}
+
+.spotify-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+

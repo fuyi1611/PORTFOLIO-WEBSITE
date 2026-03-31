@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanh's Products</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout-container">
+        <nav class="sidebar">
+            <h2 class="logo">Portfolio</h2>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="uil uil-estate"></i> CHANH</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn"><i class="uil uil-star"></i> GALLERY <i class="uil uil-angle-down"></i></button>
+                    <ul class="dropdown-content show">
+                        <li><a href="art.html">ART</a></li>
+                        <li><a href="product.html" style="color: var(--highlight-color);">PRODUCT</a></li>
+                        <li><a href="activities.html">ACTIVITIES</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#behind"><i class="uil uil-camera"></i> BACKSTAGE </a></li>
+                <li><a href="index.html#contact"><i class="uil uil-message"></i> CONTACT ME</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="uil uil-moon"></i> Dark / Light Mode
+            </button>
+        </nav>
+
+        <main class="main-content product-page">
+            
+            <div class="spotify-header">
+                <h2>Featured Works</h2>
+                <div class="spotify-tabs">
+                    <span>ALL HANDBOOKS</span>
+                </div>
+            </div>
+
+            <div class="spotify-grid">
+                <a href="handbook-1.html" class="spotify-card">
+                    <div class="card-img-wrapper">
+                        <img src="img/PRODUCT/Handbook/1.png" alt="Handbook Thumbnail">
+                    </div>
+                    <h4>The First Handbook</h4>
+                    <p>Design & Concept</p>
+                </a>
+
+                <a href="handbook-2.html" class="spotify-card">
+                    <div class="card-img-wrapper">
+                        <img src="img/PRODUCT/Brochure/1.png" alt="Brochure Thumbnail">
+                    </div>
+                    <h4>Brochure</h4>
+                    <p>Creative Process</p>
+                </a>
+
+                <a href="handbook-3.html" class="spotify-card">
+                    <div class="card-img-wrapper">
+                        <img src="img/PRODUCT/BookStreet/1.png" alt="BookStreet Thumbnail">
+                    </div>
+                    <h4>BookStreet</h4>
+                    <p>Creative Process</p>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
