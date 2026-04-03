@@ -254,10 +254,14 @@ body {
 }
 
 .art-header h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     letter-spacing: 2px;
     font-family: 'Poppins', sans-serif;
     /* font-weight: 700; */
+}
+
+.art-header p {
+    font-size: 1.5rem;
 }
 
 .art-category {
