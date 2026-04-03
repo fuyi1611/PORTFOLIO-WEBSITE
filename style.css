@@ -762,6 +762,34 @@ body.dark-mode .story-img {
     .spotify-header h2 {
         font-size: 1.8rem;
     }
+
+
+    .hero-text h1 {
+        font-size: 2.5rem; 
+    }
+    .hero-text p {
+        font-size: 1.1rem; 
+    }
+    .art-header h2, 
+    .spotify-header h2, 
+    .backstage-header h2, 
+    .contact-section h2,
+    .reader-header h2 {
+        font-size: 2rem; 
+    }
+
+    .sharp-header h3 {
+        font-size: 2.8rem; 
+    }
+
+    .story-text h3 {
+        font-size: 1.8rem; 
+    }
+    .story-text p, 
+    .backstage-header p {
+        font-size: 1rem; 
+    }
+
 }
 
 /* ===================== Anti-Glitch Image Reveal ======================= */
