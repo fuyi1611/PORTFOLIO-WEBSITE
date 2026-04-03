@@ -736,10 +736,10 @@ body.dark-mode .story-img {
         margin-bottom: 0; /* Removes the old vertical spacing */
     }
 
-    /* .nav-links a, .dropdown-btn {
+    .nav-links a, .dropdown-btn {
         font-size: 13px;
         padding: 5px 8px;
-    } */
+    }
     
     .main-content {
         margin-left: 0; /* Removes the empty space where the sidebar used to be */
