@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loadHandbookPages('handbook-content', 'img/PRODUCT/Handbook/');
     loadHandbookPages('brochure-content', 'img/PRODUCT/Brochure/');
-    loadHandbookPages('bookstreet-content', 'img/PRODUCT/Bookstreet/');
+    loadHandbookPages('bookstreet-content', 'img/PRODUCT/BookStreet/');
 });
 
 // ==========================================
