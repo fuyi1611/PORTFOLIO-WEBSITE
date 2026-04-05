@@ -279,7 +279,7 @@ body {
 
 .fade-in-section.is-visible {
     opacity: 1;
-    transform: none; /* Moves it back to its normal position */
+    transform: none; /* go go back into normal position */
 }
 
 /* ===================== Sharp Line Header ======================= */
@@ -297,7 +297,7 @@ body {
     margin-bottom: 2px; 
 }
 
-/* This draws the fading line right below the text */
+/* fading line right below the text */
 .sharp-header::after {
     content: '';
     display: block;
@@ -319,6 +319,8 @@ body {
 .pinterest-item {
     margin-bottom: 20px;
     break-inside: avoid;
+    display: inline-block; /*no gaps no gasp*/
+    width: 100%;
 }
 
 .pinterest-item img {
@@ -333,7 +335,7 @@ body {
     cursor: pointer;
 }
 
-/* Make it look good on smaller screens */
+/* look good on smaller screens */
 @media (max-width: 1000px) {
     .pinterest-gallery {
         column-count: 2;
@@ -389,14 +391,14 @@ body {
 /* The Grid Layout */
 .spotify-grid {
     display: grid;
-    /* This makes it responsive so it fits as many cards as possible */
+    /* responsive so it fits as many cards as possible */
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 35px;
 }
 
 /* The Individual Album Cards */
 .spotify-card {
-    background-color: rgba(0, 0, 0, 0.03); /* Light mode card background */
+    background-color: rgba(0, 0, 0, 0.03); /* bg go white */
     padding: 20px;
     border-radius: 8px;
     text-decoration: none;
@@ -405,7 +407,7 @@ body {
 }
 
 body.dark-mode .spotify-card {
-    background-color: #181818; /* Dark mode card background (matches Spotify) */
+    background-color: #181818; /* bg go black */
 }
 
 .spotify-card:hover {
@@ -416,7 +418,7 @@ body.dark-mode .spotify-card:hover {
     background-color: #282828; 
 }
 
-/* Forces the thumbnail to be a perfect square */
+/* thumbnail perfect square */
 .card-img-wrapper {
     aspect-ratio: 1 / 1; 
     overflow: hidden;
@@ -436,7 +438,7 @@ body.dark-mode .spotify-card:hover {
     font-size: 1.1rem;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adds the "..." if the title is too long */
+    text-overflow: ellipsis; /* Adds "..." if the title is too long */
 }
 
 .spotify-card p {
@@ -472,10 +474,10 @@ body.dark-mode .spotify-card:hover {
 
 /* The Book Layout */
 .book-container {
-    max-width: 1200px; /* This keeps the book from getting too wide on huge screens */
-    margin: 0 auto 80px auto; /* Centers the book horizontally */
+    max-width: 1200px; /* keeps the book from getting too wide on huge screens */
+    margin: 0 auto 80px auto; /* centers the book horizontally */
     display: flex;
-    flex-wrap: wrap; /* This allows the images to flow onto the next row */
+    flex-wrap: wrap; /* images go flowing onto the next row */
 
     gap: 20px;
 
@@ -483,7 +485,7 @@ body.dark-mode .spotify-card:hover {
 
     border-radius: 8px;
     
-    /* Adds a nice shadow to make it look like a physical book on a table */
+    /* nice shadow */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); 
     background-color: #fff;
 }
@@ -500,7 +502,7 @@ body.dark-mode .book-container {
     margin: 0;
     padding: 0;
     
-    /* Optional: Adds a tiny shadow to the individual pages to make them pop */
+    /* nice tiny shadow pop pop */
     box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
     border-radius: 4px;
 }
@@ -521,6 +523,24 @@ body.dark-mode .book-container {
         width: 100%; /* On small screens stack one-by-one  */
     }
 }
+/* =========================================
+       CONTACT SECTION MOBILE FIX
+       ========================================= */
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-note {
+        font-size: 1.1rem;
+    }
+
+    .contact-info {
+        font-size: 1.2rem;
+        
+        /* Break into lines */
+        word-break: break-word; 
+        padding: 0 10px;
+    }
 
 /* ===================== Floating Back Button ======================= */
 .floating-back-btn {
@@ -800,7 +820,7 @@ body.dark-mode .story-img {
 img {
     opacity: 0; 
     animation: premiumReveal 0.8s ease-out forwards;
-    will-change: opacity, filter; /* Tells the browser to process this smoothly */
+    will-change: opacity, filter; /* chop chop browser get to work */
 }
 
 @keyframes premiumReveal {
@@ -845,4 +865,5 @@ img {
 .pinterest-item:has(img) {
     background-color: transparent;
     animation: none;
+    min-height: 0; /*so it adjusts better*/
 }
