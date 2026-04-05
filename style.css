@@ -218,7 +218,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    height: 100vh;
+    min-height: 100vh;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -319,7 +319,7 @@ body {
 .pinterest-item {
     margin-bottom: 20px;
     break-inside: avoid;
-    display: inline-block; /*no gaps no gasp*/
+    display: inline-block;
     width: 100%;
 }
 
@@ -865,5 +865,5 @@ img {
 .pinterest-item:has(img) {
     background-color: transparent;
     animation: none;
-    min-height: 0; /*so it adjusts better*/
+    min-height: 0;
 }
